@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Recommendation System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #2a0845, #6441a5);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #d1b3ff;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #e0d7ff;
+    }
+    input[type="text"] {
+      width: 70%;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-right: 10px;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      outline: none;
+    }
+    input::placeholder {
+      color: #d1b3ff;
+    }
+    button {
+      background: linear-gradient(90deg, #a445b2, #d41872);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #d41872, #a445b2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Discover Your Next <br> <span style="color:#ffffff;">Favorite Movie</span></h1>
+    <p>Our advanced machine learning algorithm analyzes your taste and preferences to recommend movies you'll absolutely love.</p>
+    <form action="/recommend" method="post">
+      <input type="text" id="movie" name="movie" placeholder="Enter a movie you loved..." required>
+      <button type="submit">✨ Get Recommendations</button>
+    </form>
+  </div>
+</body>
+</html>

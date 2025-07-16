@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recommendations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #2a0845, #6441a5);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #d1b3ff;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    li {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+    li:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      background: linear-gradient(90deg, #a445b2, #d41872);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    a:hover {
+      background: linear-gradient(90deg, #d41872, #a445b2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Recommendations for "{{ movie }}"</h1>
+    <ul>
+      {% for rec in recommendations %}
+        <li>{{ rec }}</li>
+      {% endfor %}
+    </ul>
+    <a href="/">← Go back</a>
+  </div>
+</body>
+</html>
