@@ -37,7 +37,7 @@ Enter the name of a movie you love, and get personalized recommendations powered
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/yourusername/movie-recommendation-app.git
+    git clone https://github.com/jessica-murare/movie-recommender-app.git
     cd movie-recommendation-app
     ```
 
